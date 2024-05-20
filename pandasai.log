@@ -1,0 +1,334 @@
+2024-05-16 22:08:41 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:08:43 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:08:43 [INFO] Prompt ID: ed08785f-a1f6-4597-9539-5a52be55d2f9
+2024-05-16 22:08:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:08:43 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:08:43 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:08:43 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:08:43 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:08:53 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:08:53 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:08:53 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:08:53 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:08:53 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:08:53 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:08:53 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:08:53 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:08:57 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:08:57 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-16 22:08:57 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-05-16 22:08:57 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:08:57 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:08:57 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:09:01 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:09:01 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-16 22:09:01 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-05-16 22:09:01 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:09:01 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:09:01 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:09:07 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:09:07 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-05-16 22:09:07 [ERROR] Pipeline failed on step 6: Result must be in the format of dictionary of type and value
+2024-05-16 22:10:42 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:10:47 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:10:48 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:10:48 [INFO] Prompt ID: 5e7dee7f-bf60-4f2f-8819-0807b21f58ad
+2024-05-16 22:10:48 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:10:48 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:10:48 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:10:48 [INFO] Using cached response
+2024-05-16 22:10:48 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:10:48 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:10:48 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:10:48 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:10:48 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:10:48 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:10:48 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:10:48 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:10:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:10:49 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:10:49 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:10:49 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:10:49 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:10:50 [ERROR] Pipeline failed on step 1:  (Request ID: 0PYhlVWXo_SdXZMcLRX0u)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/vilm/VinaLlama2-14B.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model vilm/VinaLlama2-14B is too large to be loaded automatically (28GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:10:50 [ERROR] Pipeline failed on step 6:  (Request ID: 0PYhlVWXo_SdXZMcLRX0u)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/vilm/VinaLlama2-14B.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model vilm/VinaLlama2-14B is too large to be loaded automatically (28GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:12:02 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:12:09 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:12:11 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:12:11 [INFO] Prompt ID: 912ac9db-150c-4937-bd37-c29691a3d907
+2024-05-16 22:12:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:12:11 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:12:11 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:12:11 [INFO] Using cached response
+2024-05-16 22:12:11 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:12:11 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:12:11 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:12:11 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:12:11 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:12:11 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:12:11 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:12:11 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:12:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:12:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:12:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:12:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:12:11 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:12:13 [ERROR] Pipeline failed on step 1: 404 Client Error: Not Found for url: https://api-inference.huggingface.co/models/vilm/VinaLlama2-7B-chat (Request ID: mCJX1RjBys4yCBpP-d5hJ)
+
+Model vilm/VinaLlama2-7B-chat does not exist
+2024-05-16 22:12:13 [ERROR] Pipeline failed on step 6: 404 Client Error: Not Found for url: https://api-inference.huggingface.co/models/vilm/VinaLlama2-7B-chat (Request ID: mCJX1RjBys4yCBpP-d5hJ)
+
+Model vilm/VinaLlama2-7B-chat does not exist
+2024-05-16 22:13:01 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:13:05 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:13:06 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:13:06 [INFO] Prompt ID: d2c8b04e-7c15-4318-8db8-c9255b1c0a3f
+2024-05-16 22:13:06 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:13:06 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:13:06 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:13:06 [INFO] Using cached response
+2024-05-16 22:13:06 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:13:06 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:13:06 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:13:06 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:13:06 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:13:06 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:13:06 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:13:06 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:13:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:13:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:13:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:13:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:13:06 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:13:08 [ERROR] Pipeline failed on step 1:  (Request ID: t-DINhStwrXQGP4sDbluo)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/vilm/VinaLlama-7B-chat.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model vilm/vinallama-7b-chat is too large to be loaded automatically (13GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:13:08 [ERROR] Pipeline failed on step 6:  (Request ID: t-DINhStwrXQGP4sDbluo)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/vilm/VinaLlama-7B-chat.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model vilm/vinallama-7b-chat is too large to be loaded automatically (13GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:15:07 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:15:11 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:15:13 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:15:13 [INFO] Prompt ID: 7bee789f-930a-483c-92a7-1d79586a9529
+2024-05-16 22:15:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:15:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:15:13 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:15:13 [INFO] Using cached response
+2024-05-16 22:15:13 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:15:13 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:15:13 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:15:13 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:15:13 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:15:13 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:15:13 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:15:13 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:15:13 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:15:13 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:15:13 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:15:13 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:15:13 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:15:19 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:15:19 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 5
+SyntaxError: 'return' outside function
+
+2024-05-16 22:15:19 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-05-16 22:15:19 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:15:19 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:15:19 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:15:24 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:15:24 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-05-16 22:15:24 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-05-16 22:15:24 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:15:24 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:15:24 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:15:28 [INFO] Executing Step 2: CodeCleaning
+2024-05-16 22:15:28 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-05-16 22:15:28 [ERROR] Pipeline failed on step 6: No result returned
+2024-05-16 22:16:48 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:16:52 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:16:53 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:16:53 [INFO] Prompt ID: 3908ee1d-d40c-4fe4-aa3a-e3c7e08b5315
+2024-05-16 22:16:53 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:16:53 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:16:53 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:16:53 [INFO] Using cached response
+2024-05-16 22:16:53 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:16:53 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:16:53 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:16:53 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:16:53 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:16:53 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:16:53 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:16:53 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:16:53 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:16:53 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:16:53 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:16:53 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:16:53 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:16:55 [ERROR] Pipeline failed on step 1:  (Request ID: TrG1cpKUzx5vRvRv6Ah51)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/Qwen/Qwen1.5-110B-Chat.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model Qwen/Qwen1.5-110B-Chat is too large to be loaded automatically (222GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:16:55 [ERROR] Pipeline failed on step 6:  (Request ID: TrG1cpKUzx5vRvRv6Ah51)
+
+403 Forbidden: None.
+Cannot access content at: https://api-inference.huggingface.co/models/Qwen/Qwen1.5-110B-Chat.
+If you are trying to create or update content,make sure you have a token with the `write` role.
+The model Qwen/Qwen1.5-110B-Chat is too large to be loaded automatically (222GB > 10GB). Please use Spaces (https://huggingface.co/spaces) or Inference Endpoints (https://huggingface.co/inference-endpoints).
+2024-05-16 22:17:19 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:17:23 [WARNING] WARNING! token is not default parameter.
+                    token was transferred to model_kwargs.
+                    Please make sure that token is what you intended.
+2024-05-16 22:17:25 [INFO] Running PandasAI with langchain_huggingface_endpoint LLM...
+2024-05-16 22:17:25 [INFO] Prompt ID: 8d938f17-ff25-4964-bb80-d1693632ab7b
+2024-05-16 22:17:25 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-05-16 22:17:25 [INFO] Executing Step 0: ValidatePipelineInput
+2024-05-16 22:17:25 [INFO] Executing Step 1: CacheLookup
+2024-05-16 22:17:25 [INFO] Using cached response
+2024-05-16 22:17:25 [INFO] Executing Step 2: PromptGeneration
+2024-05-16 22:17:25 [INFO] Executing Step 2: Skipping...
+2024-05-16 22:17:25 [INFO] Executing Step 3: CodeGenerator
+2024-05-16 22:17:25 [INFO] Executing Step 3: Skipping...
+2024-05-16 22:17:25 [INFO] Executing Step 4: CachePopulation
+2024-05-16 22:17:25 [INFO] Executing Step 4: Skipping...
+2024-05-16 22:17:25 [INFO] Executing Step 5: CodeCleaning
+2024-05-16 22:17:25 [INFO] Executing Step 6: CodeExecution
+2024-05-16 22:17:25 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\AI-workspace\HR-dashboard\.venv\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+
+2024-05-16 22:17:25 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-05-16 22:17:25 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-05-16 22:17:25 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-05-16 22:17:25 [INFO] Executing Step 1: CodeGenerator
+2024-05-16 22:17:50 [ERROR] Pipeline failed on step 1:  (Request ID: dgaEZTAI7ZrgfixRpAyNM)
+
+Bad request:
+Error in `parameters.max_new_tokens`: ensure this value is less than or equal to 250
+2024-05-16 22:17:50 [ERROR] Pipeline failed on step 6:  (Request ID: dgaEZTAI7ZrgfixRpAyNM)
+
+Bad request:
+Error in `parameters.max_new_tokens`: ensure this value is less than or equal to 250

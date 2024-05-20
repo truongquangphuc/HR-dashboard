@@ -1,0 +1,6 @@
+python-dotenv
+tabulate
+openpyxl
+langchain
+langchain_experimental
+langchain_openai
