@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import asyncio
 from dotenv import load_dotenv
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -29,13 +30,20 @@ def load_data(path: str):
 
 df = load_data(input_xlsx)
 
-llm = ChatGoogleGenerativeAI(model="gemini-pro")
-agent = create_csv_agent(llm, output_csv, verbose=True)
+# Function to create agent and run user query
+async def run_agent(query):
+    llm = ChatGoogleGenerativeAI(model="gemini-pro")
+    agent = create_csv_agent(llm, output_csv, verbose=True)
+    response = await agent.run(query)
+    return response
 
 user_query = st.text_input("Ask a question about your data:")
 if user_query:
-    response = agent.run(user_query)
-    st.write("Response:", response)
+    try:
+        response = asyncio.run(run_agent(user_query))
+        st.write("Response:", response)
+    except Exception as e:
+        st.error(f"Error: {e}")
 
 with st.expander("Data Preview"):
     st.dataframe(df, hide_index=True)
