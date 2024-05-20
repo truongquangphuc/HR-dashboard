@@ -1,23 +1,22 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import asyncio
 from dotenv import load_dotenv
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Load environment variables
+# Tải các biến môi trường
 load_dotenv()
 
 #######################################
-# PAGE SETUP
+# CÀI ĐẶT TRANG
 #######################################
 
 st.set_page_config(page_title="Quản lý nhân sự", page_icon=":bar_chart:", layout="wide")
 st.title("Thống kê nhân sự")
 
 #######################################
-# DATA LOADING
+# TẢI DỮ LIỆU
 #######################################
 input_xlsx = r'excel_file_example.xlsx'
 output_csv = r'excel_file_example.csv'
@@ -30,26 +29,26 @@ def load_data(path: str):
 
 df = load_data(input_xlsx)
 
-# Function to create agent and run user query
-async def run_agent(query):
+# Hàm tạo agent và chạy truy vấn của người dùng
+def run_agent(query):
     llm = ChatGoogleGenerativeAI(model="gemini-pro")
     agent = create_csv_agent(llm, output_csv, verbose=True)
-    response = await agent.run(query)
+    response = agent.run(query)
     return response
 
-user_query = st.text_input("Ask a question about your data:")
+user_query = st.text_input("Đặt câu hỏi về dữ liệu của bạn:")
 if user_query:
     try:
-        response = asyncio.run(run_agent(user_query))
-        st.write("Response:", response)
+        response = run_agent(user_query)
+        st.write("Phản hồi:", response)
     except Exception as e:
-        st.error(f"Error: {e}")
+        st.error(f"Lỗi: {e}")
 
-with st.expander("Data Preview"):
+with st.expander("Xem trước dữ liệu"):
     st.dataframe(df, hide_index=True)
 
 #######################################
-# VISUALIZATION METHODS
+# PHƯƠNG PHÁP HIỂN THỊ
 #######################################
 
 def plot_bottom_right():
@@ -94,7 +93,7 @@ def plot_top_right():
         st.plotly_chart(fig, use_container_width=True)
 
     except Exception as e:
-        st.error(f"Error reading the file: {e}")
+        st.error(f"Lỗi khi đọc file: {e}")
 
 def plot_employee_count_by_department():
     data = pd.read_excel('excel_file_example.xlsx')
@@ -154,10 +153,10 @@ def plot_position_distribution():
         st.plotly_chart(fig, use_container_width=True)
 
     except Exception as e:
-        st.error(f"Error reading the file: {e}")
+        st.error(f"Lỗi khi đọc file: {e}")
 
 #######################################
-# STREAMLIT LAYOUT
+# BỐ CỤC STREAMLIT
 #######################################
 
 top_left_column, top_right_column = st.columns((2, 1))
