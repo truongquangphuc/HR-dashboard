@@ -39,12 +39,12 @@ df = load_data(input_xlsx)
 llm = ChatGoogleGenerativeAI(model="gemini-pro")
 agent = create_csv_agent(llm, output_csv, verbose=True)
 
-user_query = st.text_input("Ask a question about your data:")
+user_query = st.text_input("Đặt câu hỏi về thông tin công chức:")
 if user_query:
     response = agent.run(user_query)
-    st.write("Response:", response)
+    st.write("Trả lời:", response)
 
-with st.expander("Data Preview"):
+with st.expander("Thông tin tổng quát"):
     st.dataframe(df, hide_index=True)
 
 #######################################
