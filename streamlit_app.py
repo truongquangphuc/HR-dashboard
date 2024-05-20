@@ -5,29 +5,29 @@ from dotenv import load_dotenv
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Load environment variables
-load_dotenv()
+def main():
+    # Load environment variables
+    load_dotenv()
 
-#######################################
-# PAGE SETUP
-#######################################
+    #######################################
+    # PAGE SETUP
+    #######################################
 
-st.set_page_config(page_title="Quản lý nhân sự", page_icon=":bar_chart:", layout="wide")
-st.title("Thống kê nhân sự")
+    st.set_page_config(page_title="Quản lý nhân sự", page_icon=":bar_chart:", layout="wide")
+    st.title("Thống kê nhân sự")
 
-#######################################
-# DATA LOADING
-#######################################
-input_xlsx = r'excel_file_example.xlsx'
-output_csv = r'excel_file_example.csv'
+    #######################################
+    # DATA LOADING
+    #######################################
+    input_xlsx = r'excel_file_example.xlsx'
+    output_csv = r'excel_file_example.csv'
 
-@st.cache_data
-def load_data(path: str):
-    df = pd.read_excel(path, engine='openpyxl')
-    df.to_csv(output_csv, index=False)
-    return df
+    @st.cache_data
+    def load_data(path: str):
+        df = pd.read_excel(path, engine='openpyxl')
+        df.to_csv(output_csv, index=False)
+        return df
 
-if __name__ == '__main__':
     df = load_data(input_xlsx)
 
     llm = ChatGoogleGenerativeAI(model="gemini-pro")
@@ -173,3 +173,6 @@ if __name__ == '__main__':
 
     with bottom_right_column:
         plot_bottom_right()
+
+if __name__ == "__main__":
+    main()
