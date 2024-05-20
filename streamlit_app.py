@@ -1,11 +1,16 @@
+import asyncio
+
+# Create a new event loop
+loop = asyncio.new_event_loop()
+
+# Set the event loop as the current event loop
+asyncio.set_event_loop(loop)
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
-import asyncio
-asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
 
 # Load environment variables
 load_dotenv()
